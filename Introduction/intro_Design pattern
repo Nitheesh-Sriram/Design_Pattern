@@ -1,0 +1,101 @@
+Design Patterns – Clean Notes
+
+(Converted from your PDF)
+
+📄 Page 1 – Introduction to Design Patterns
+🔹 What is a Design Pattern?
+
+A design pattern is a:
+
+Reusable and proven solution to a commonly occurring problem in software design.
+
+⚠️ Important Note
+It is NOT actual code that you can directly copy-paste.
+It is a concept/template/approach, not an implementation.
+🔹 Real-World Analogy
+When an architect builds a staircase:
+They don’t invent a new design every time.
+They use existing proven designs.
+
+👉 Similarly:
+
+Software developers use design patterns for recurring problems.
+🔹 What a Design Pattern Provides
+
+A design pattern helps you understand:
+
+What problem exists
+Why that problem happens
+What structure can solve it
+When to use the solution
+Advantages and disadvantages
+🔹 Key Idea
+
+A design pattern is a standard way to solve recurring software design problems.
+
+📄 Page 2 – Why Design Patterns Are Used
+🔹 Purpose of Design Patterns
+
+Design patterns help developers while building:
+
+Software services
+Applications / products
+🔹 Benefits
+Write cleaner code
+Reuse proven solutions
+Make code easier to understand
+Reduce bugs
+Improve communication between developers
+Make systems easier to maintain and extend
+Avoid reinventing the wheel
+🔹 Real-Life Example
+
+Imagine you are building a house.
+
+Different houses may need:
+
+Doors
+Windows
+Roofs
+Staircases
+
+👉 You don’t design each from scratch every time.
+👉 You reuse existing, tested designs.
+
+🔹 Core Insight
+
+Design patterns in software work exactly like these reusable building designs.
+
+📄 Page 3 – Important Notes + Structure
+🔹 What a Design Pattern is NOT
+
+A design pattern is NOT:
+
+A programming language
+A library
+A framework
+Ready-made code
+🔹 What It Actually Is
+
+A design pattern is a solution idea or structural approach.
+
+🔹 Language Independence
+
+You can implement the same design pattern in multiple languages:
+
+Java
+Python
+C++
+JavaScript
+etc.
+🔹 Parts of a Design Pattern
+
+Every design pattern typically includes:
+
+Name – Identifier of the pattern
+Problem – What issue it solves
+Solution – How it solves it
+Consequences – Pros and cons
+🔹 Final Definition
+
+A design pattern is a reusable, standard solution to common software design problems that helps developers write better, cleaner, and more maintainable code.
