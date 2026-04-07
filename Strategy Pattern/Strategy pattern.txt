@@ -1,0 +1,133 @@
+Page 1 – Introduction & Problem
+🔹 Strategy Pattern
+
+A Behavioral Design Pattern
+
+🔹 Problem
+
+You have multiple ways to perform the same task
+
+Examples:
+Payment:
+UPI
+Card
+Wallet
+Sorting:
+Quick Sort
+Merge Sort
+🔹 Common Beginner Mistake ❌
+if type == "A":
+    do_this()
+elif type == "B":
+    do_that()
+❗ Problems:
+Messy and unscalable
+Hard to maintain
+Violates clean code principles
+🔹 Strategy Solution ✅
+Separate each behavior into its own class
+Make them interchangeable at runtime
+Encapsulate algorithms
+🔹 Key Idea
+
+Encapsulate a family of algorithms and make them interchangeable
+
+🔹 Intent
+Define a family of algorithms
+Encapsulate each one
+Make them interchangeable
+Use them based on requirement
+📄 Page 2 – Structure & Components
+🔹 Core Idea
+
+Algorithms should vary independently from the client using them
+
+🔹 Structure (From Diagram)
+        Context
+           ↑
+        Strategy
+        /      \
+Strategy A   Strategy B
+🔹 3 Main Components
+1. Strategy Interface
+Defines a common method
+Example:
+execute()
+2. Concrete Strategies
+Different implementations of the algorithm
+Examples:
+Formal response strategy
+Casual response strategy
+Technical response strategy
+3. Context (Main System)
+Uses a strategy
+Selects strategy dynamically
+📄 Page 3 – Real World & Bad Design
+🔹 Real-World Example
+AI Response Generator:
+Formal reply
+Casual reply
+Technical reply
+🔹 Bad Design (Avoid This)
+def generate_response(type, input):
+    if type == "formal":
+        return "Good evening " + input
+    elif type == "casual":
+        return "Hey bro " + input
+    elif type == "technical":
+        return "According to analysis " + input
+❗ Problems
+Adding new type → modify function
+Violates Open/Closed Principle
+Hard to scale
+Not flexible
+📄 Page 4 – Good Design (Implementation)
+🔹 Step 1 – Strategy Interface
+class ResponseStrategy:
+    def generate(self, input_text):
+        pass
+🔹 Step 2 – Concrete Strategies
+class FormalStrategy(ResponseStrategy):
+    def generate(self, input_text):
+        return "Good evening " + input_text
+
+
+class CasualStrategy(ResponseStrategy):
+    def generate(self, input_text):
+        return "Hey! " + input_text
+
+
+class TechnicalStrategy(ResponseStrategy):
+    def generate(self, input_text):
+        return "From a technical perspective " + input_text
+🔹 Step 3 – Context Class
+class AIResponseSystem:
+    def __init__(self, strategy: ResponseStrategy):
+        self.strategy = strategy
+
+    def set_strategy(self, strategy: ResponseStrategy):
+        self.strategy = strategy
+📄 Page 5 – Usage
+🔹 Execute Strategy
+def generate_response(self, input_text):
+    return self.strategy.generate(input_text)
+🔹 Using It
+ai = AIResponseSystem(FormalStrategy())
+print(ai.generate_response("your request is processed"))
+
+ai.set_strategy(CasualStrategy())
+print(ai.generate_response("done"))
+
+ai.set_strategy(TechnicalStrategy())
+print(ai.generate_response("task executed"))
+🚀 Final Summary
+
+Strategy Pattern allows you to:
+
+Replace if-else logic with clean design
+Switch algorithms at runtime
+Follow Open/Closed Principle
+Build scalable and maintainable systems
+🔥 Interview One-Liner
+
+“Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable at runtime.”
